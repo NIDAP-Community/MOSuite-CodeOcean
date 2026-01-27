@@ -1,0 +1,9 @@
+metadata_version: 1
+name: MOSuite-pipeline
+description: MOSuite pipeline for differential analysis of multi-omic data
+tags:
+- Bulk RNA-seq
+- MOSuite
+authors:
+- name: CCR Collaborative Bioinformatics Resource
+- name: Kelly Sovacool

@@ -1,0 +1,41 @@
+{
+	"version": 2,
+	"processes": [
+		{
+			"name": "capsule_mosuite_clean_1",
+			"capsule": {
+				"id": "ab07963e-d9e0-489e-b776-70f6ef2ef73b",
+				"name": "MOSuite-clean",
+				"slug": "5801113",
+				"version": 1,
+				"app_panel": true
+			},
+			"resources": {
+				"cpus": 1,
+				"memory": 8
+			},
+			"inputs": [
+				{
+					"id": "uqbFE30XQBTDxBxR",
+					"source_id": "capsule_mosuite_create_2",
+					"type": "capsule",
+					"name": "MOSuite-create"
+				}
+			]
+		},
+		{
+			"name": "capsule_mosuite_create_2",
+			"capsule": {
+				"id": "5ce5f88d-980d-4e61-b3a4-ef4a0ce48030",
+				"name": "MOSuite-create",
+				"slug": "6541445",
+				"version": 2,
+				"app_panel": true
+			},
+			"resources": {
+				"cpus": 1,
+				"memory": 8
+			}
+		}
+	]
+}

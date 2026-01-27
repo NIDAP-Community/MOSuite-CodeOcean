@@ -1,0 +1,49 @@
+{
+	"edges": [
+		{
+			"id": "xy-edge__capsule_mosuite_create_2-capsule_mosuite_clean_1",
+			"source": "capsule_mosuite_create_2",
+			"target": "capsule_mosuite_clean_1"
+		}
+	],
+	"nodes": [
+		{
+			"data": {
+				"capsule_id": "ab07963e-d9e0-489e-b776-70f6ef2ef73b"
+			},
+			"id": "capsule_mosuite_clean_1",
+			"position": {
+				"x": 842.6666666666667,
+				"y": 270
+			},
+			"selected": false,
+			"type": "capsule"
+		},
+		{
+			"id": "results",
+			"position": {
+				"x": 960,
+				"y": 614
+			},
+			"type": "results"
+		},
+		{
+			"data": {
+				"capsule_id": "5ce5f88d-980d-4e61-b3a4-ef4a0ce48030"
+			},
+			"id": "capsule_mosuite_create_2",
+			"position": {
+				"x": 718.6666666666666,
+				"y": 31.333333333333343
+			},
+			"selected": true,
+			"type": "capsule"
+		}
+	],
+	"timestamp": 1769554760195,
+	"viewport": {
+		"x": 6,
+		"y": 87,
+		"zoom": 0.75
+	}
+}
