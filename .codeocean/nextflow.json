@@ -12,7 +12,7 @@
 			},
 			"resources": {
 				"cpus": 1,
-				"memory": 8
+				"memory": 4
 			},
 			"inputs": [
 				{
@@ -21,7 +21,10 @@
 					"type": "capsule",
 					"name": "MOSuite-create"
 				}
-			]
+			],
+			"results": {
+				"id": "ab07963e-d9e0-489e-b776-70f6ef2ef73b"
+			}
 		},
 		{
 			"name": "capsule_mosuite_create_2",
@@ -34,7 +37,7 @@
 			},
 			"resources": {
 				"cpus": 1,
-				"memory": 8
+				"memory": 4
 			}
 		}
 	]

@@ -4,6 +4,11 @@
 			"id": "xy-edge__capsule_mosuite_create_2-capsule_mosuite_clean_1",
 			"source": "capsule_mosuite_create_2",
 			"target": "capsule_mosuite_clean_1"
+		},
+		{
+			"id": "xy-edge__capsule_mosuite_clean_1-results",
+			"source": "capsule_mosuite_clean_1",
+			"target": "results"
 		}
 	],
 	"nodes": [
@@ -40,10 +45,10 @@
 			"type": "capsule"
 		}
 	],
-	"timestamp": 1769554760195,
+	"timestamp": 1769624886972,
 	"viewport": {
-		"x": 6,
-		"y": 87,
+		"x": -138,
+		"y": 162,
 		"zoom": 0.75
 	}
 }

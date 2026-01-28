@@ -1,5 +1,5 @@
 #!/usr/bin/env nextflow
-// hash:sha256:4b0bcda131abb27fe9f74befd9dd96e7bdb41c86bd4eef2bba0c0bccf8715402
+// hash:sha256:fc7707155fa4333219b4c0480ac4dd17544f4f655aaee1688d233ee4abbbd98b
 
 // capsule - MOSuite-create
 process capsule_mosuite_create_2 {
@@ -7,7 +7,7 @@ process capsule_mosuite_create_2 {
 	container "$REGISTRY_HOST/published/5ce5f88d-980d-4e61-b3a4-ef4a0ce48030:v3"
 
 	cpus 1
-	memory '7.5 GB'
+	memory '3.75 GB'
 
 	output:
 	path 'capsule/results/*', emit: to_capsule_mosuite_clean_1_1
@@ -19,7 +19,7 @@ process capsule_mosuite_create_2 {
 
 	export CO_CAPSULE_ID=5ce5f88d-980d-4e61-b3a4-ef4a0ce48030
 	export CO_CPUS=1
-	export CO_MEMORY=8053063680
+	export CO_MEMORY=4026531840
 
 	mkdir -p capsule
 	mkdir -p capsule/data && ln -s \$PWD/capsule/data /data
@@ -50,10 +50,15 @@ process capsule_mosuite_clean_1 {
 	container "$REGISTRY_HOST/published/ab07963e-d9e0-489e-b776-70f6ef2ef73b:v2"
 
 	cpus 1
-	memory '7.5 GB'
+	memory '3.75 GB'
+
+	publishDir "$RESULTS_PATH", saveAs: { filename -> new File(filename).getName() }
 
 	input:
 	path 'capsule/data/'
+
+	output:
+	path 'capsule/results/*'
 
 	script:
 	"""
@@ -62,7 +67,7 @@ process capsule_mosuite_clean_1 {
 
 	export CO_CAPSULE_ID=ab07963e-d9e0-489e-b776-70f6ef2ef73b
 	export CO_CPUS=1
-	export CO_MEMORY=8053063680
+	export CO_MEMORY=4026531840
 
 	mkdir -p capsule
 	mkdir -p capsule/data && ln -s \$PWD/capsule/data /data
