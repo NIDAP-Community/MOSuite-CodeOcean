@@ -21,7 +21,7 @@
 				"x": 842.6666666666667,
 				"y": 270
 			},
-			"selected": false,
+			"selected": true,
 			"type": "capsule"
 		},
 		{
@@ -41,11 +41,11 @@
 				"x": 718.6666666666666,
 				"y": 31.333333333333343
 			},
-			"selected": true,
+			"selected": false,
 			"type": "capsule"
 		}
 	],
-	"timestamp": 1769624886972,
+	"timestamp": 1769626304514,
 	"viewport": {
 		"x": -138,
 		"y": 162,

@@ -1,5 +1,5 @@
 #!/usr/bin/env nextflow
-// hash:sha256:fc7707155fa4333219b4c0480ac4dd17544f4f655aaee1688d233ee4abbbd98b
+// hash:sha256:9b16fd2671702fcc56078aa8b25ef1fb8c069f03988557476eb9af8fad550618
 
 // capsule - MOSuite-create
 process capsule_mosuite_create_2 {
@@ -51,6 +51,8 @@ process capsule_mosuite_clean_1 {
 
 	cpus 1
 	memory '3.75 GB'
+
+	publishDir "$RESULTS_PATH", saveAs: { filename -> new File(filename).getName() }
 
 	publishDir "$RESULTS_PATH", saveAs: { filename -> new File(filename).getName() }
 
