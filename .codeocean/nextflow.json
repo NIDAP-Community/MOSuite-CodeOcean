@@ -12,11 +12,11 @@
 			},
 			"resources": {
 				"cpus": 1,
-				"memory": 8
+				"memory": 4
 			},
 			"inputs": [
 				{
-					"id": "NLgJ8e32jH3YibWL",
+					"id": "2P0EuEmZ9xTRXDi4",
 					"source_id": "capsule_mosuite_create_2",
 					"type": "capsule",
 					"name": "MOSuite-create"
@@ -32,13 +32,23 @@
 				"id": "5ce5f88d-980d-4e61-b3a4-ef4a0ce48030",
 				"name": "MOSuite-create",
 				"slug": "6541445",
-				"version": 3,
+				"version": 4,
 				"app_panel": true
 			},
 			"resources": {
 				"cpus": 1,
 				"memory": 8
-			}
+			},
+			"inputs": [
+				{
+					"id": "0EPP5jk5bdTFG7OY",
+					"source_id": "bd9a7518-66cb-4d50-9992-df3271aeb807",
+					"type": "dataset",
+					"name": "nidap-1.0",
+					"source_path": "nidap-1.0/",
+					"collect": true
+				}
+			]
 		}
 	]
 }

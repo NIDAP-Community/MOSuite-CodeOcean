@@ -2,8 +2,8 @@
 	"version": 1,
 	"attached_datasets": [
 		{
-			"id": "4ea90259-b1ac-491b-8571-5c25a8a98529",
-			"mount": "moo-create"
+			"id": "bd9a7518-66cb-4d50-9992-df3271aeb807",
+			"mount": "nidap-1.0"
 		}
 	]
 }

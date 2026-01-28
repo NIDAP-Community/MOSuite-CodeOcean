@@ -1,10 +1,10 @@
 #!/usr/bin/env nextflow
-// hash:sha256:9b16fd2671702fcc56078aa8b25ef1fb8c069f03988557476eb9af8fad550618
+// hash:sha256:fd6acbeeb5285b14a52855521f09dd66b08f397d1e42c2bd7b7c2835107c03aa
 
 // capsule - MOSuite-create
 process capsule_mosuite_create_2 {
 	tag 'capsule-6541445'
-	container "$REGISTRY_HOST/published/5ce5f88d-980d-4e61-b3a4-ef4a0ce48030:v3"
+	container "$REGISTRY_HOST/published/5ce5f88d-980d-4e61-b3a4-ef4a0ce48030:v4"
 
 	cpus 1
 	memory '7.5 GB'
@@ -26,11 +26,13 @@ process capsule_mosuite_create_2 {
 	mkdir -p capsule/results && ln -s \$PWD/capsule/results /results
 	mkdir -p capsule/scratch && ln -s \$PWD/capsule/scratch /scratch
 
+	ln -s "/tmp/data/nidap-1.0" "capsule/data/nidap-1.0" # id: bd9a7518-66cb-4d50-9992-df3271aeb807
+
 	echo "[${task.tag}] cloning git repo..."
 	if [[ "\$(printf '%s\n' "2.20.0" "\$(git version | awk '{print \$3}')" | sort -V | head -n1)" = "2.20.0" ]]; then
-		git clone --filter=tree:0 --branch v3.0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-6541445.git" capsule-repo
+		git clone --filter=tree:0 --branch v4.0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-6541445.git" capsule-repo
 	else
-		git clone --branch v3.0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-6541445.git" capsule-repo
+		git clone --branch v4.0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-6541445.git" capsule-repo
 	fi
 	mv capsule-repo/code capsule/code && ln -s \$PWD/capsule/code /code
 	rm -rf capsule-repo
@@ -50,7 +52,7 @@ process capsule_mosuite_clean_1 {
 	container "$REGISTRY_HOST/published/ab07963e-d9e0-489e-b776-70f6ef2ef73b:v2"
 
 	cpus 1
-	memory '7.5 GB'
+	memory '3.75 GB'
 
 	publishDir "$RESULTS_PATH", saveAs: { filename -> new File(filename).getName() }
 
@@ -67,7 +69,7 @@ process capsule_mosuite_clean_1 {
 
 	export CO_CAPSULE_ID=ab07963e-d9e0-489e-b776-70f6ef2ef73b
 	export CO_CPUS=1
-	export CO_MEMORY=8053063680
+	export CO_MEMORY=4026531840
 
 	mkdir -p capsule
 	mkdir -p capsule/data && ln -s \$PWD/capsule/data /data
