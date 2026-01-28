@@ -1,5 +1,15 @@
 {
 	"version": 1,
+	"general": {
+		"title": "MOSuite-pipeline",
+		"instructions": "differential multi-omics analysis pipeline"
+	},
+	"datasets": [
+		{
+			"id": "bd9a7518-66cb-4d50-9992-df3271aeb807",
+			"name": "bulk RNA-seq training dataset"
+		}
+	],
 	"processes": [
 		"capsule_mosuite_create_2",
 		"capsule_mosuite_clean_1"
