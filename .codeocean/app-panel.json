@@ -1,6 +1,7 @@
 {
 	"version": 1,
 	"processes": [
-		"capsule_mosuite_create_2"
+		"capsule_mosuite_create_2",
+		"capsule_mosuite_clean_1"
 	]
 }
