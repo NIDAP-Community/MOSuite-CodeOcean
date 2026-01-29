@@ -1,7 +1,10 @@
 {
 	"version": 1,
 	"processes": [
-		"capsule_mosuite_clean_1",
-		"capsule_mosuite_create_2"
+		"capsule_mosuite_create_multiomicdataset_4",
+		"capsule_mosuite_clean_raw_counts_5",
+		"capsule_mosuite_filter_low_counts_6",
+		"capsule_mosuite_normalize_counts_7",
+		"capsule_mosuite_batch_correct_counts_8"
 	]
 }
