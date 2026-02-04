@@ -1,69 +1,125 @@
 {
 	"edges": [
 		{
-			"id": "xy-edge__capsule_mosuite_clean_1-results",
-			"source": "capsule_mosuite_clean_1",
-			"target": "results"
-		},
-		{
-			"id": "xy-edge__capsule_mosuite_create_2-capsule_mosuite_clean_1",
-			"source": "capsule_mosuite_create_2",
-			"target": "capsule_mosuite_clean_1"
-		},
-		{
-			"id": "xy-edge__bd9a7518-66cb-4d50-9992-df3271aeb807-capsule_mosuite_create_2",
+			"id": "xy-edge__bd9a7518-66cb-4d50-9992-df3271aeb807-capsule_mosuite_create_multiomicdataset_4",
+			"selected": false,
 			"source": "bd9a7518-66cb-4d50-9992-df3271aeb807",
-			"target": "capsule_mosuite_create_2"
+			"target": "capsule_mosuite_create_multiomicdataset_4"
+		},
+		{
+			"id": "xy-edge__capsule_mosuite_create_multiomicdataset_4-capsule_mosuite_clean_raw_counts_5",
+			"selected": false,
+			"source": "capsule_mosuite_create_multiomicdataset_4",
+			"target": "capsule_mosuite_clean_raw_counts_5"
+		},
+		{
+			"id": "xy-edge__capsule_mosuite_clean_raw_counts_5-capsule_mosuite_filter_low_counts_6",
+			"selected": false,
+			"source": "capsule_mosuite_clean_raw_counts_5",
+			"target": "capsule_mosuite_filter_low_counts_6"
+		},
+		{
+			"id": "xy-edge__capsule_mosuite_filter_low_counts_6-capsule_mosuite_normalize_counts_7",
+			"selected": false,
+			"source": "capsule_mosuite_filter_low_counts_6",
+			"target": "capsule_mosuite_normalize_counts_7"
+		},
+		{
+			"id": "xy-edge__capsule_mosuite_normalize_counts_7-capsule_mosuite_batch_correct_counts_8",
+			"selected": false,
+			"source": "capsule_mosuite_normalize_counts_7",
+			"target": "capsule_mosuite_batch_correct_counts_8"
+		},
+		{
+			"id": "xy-edge__capsule_mosuite_batch_correct_counts_8-results",
+			"source": "capsule_mosuite_batch_correct_counts_8",
+			"target": "results"
 		}
 	],
 	"nodes": [
 		{
-			"data": {
-				"capsule_id": "ab07963e-d9e0-489e-b776-70f6ef2ef73b"
-			},
-			"id": "capsule_mosuite_clean_1",
-			"position": {
-				"x": 842.6666666666667,
-				"y": 270
-			},
-			"selected": false,
-			"type": "capsule"
-		},
-		{
 			"id": "results",
 			"position": {
-				"x": 1017.3333333333334,
-				"y": 560.6666666666666
+				"x": 1303.2016865226233,
+				"y": 978.5350198559569
 			},
-			"selected": true,
+			"selected": false,
 			"type": "results"
+		},
+		{
+			"id": "bd9a7518-66cb-4d50-9992-df3271aeb807",
+			"position": {
+				"x": 803.9578354285136,
+				"y": -268.2178495330654
+			},
+			"selected": false,
+			"type": "dataset"
 		},
 		{
 			"data": {
 				"capsule_id": "5ce5f88d-980d-4e61-b3a4-ef4a0ce48030"
 			},
-			"id": "capsule_mosuite_create_2",
+			"id": "capsule_mosuite_create_multiomicdataset_4",
 			"position": {
-				"x": 709.3333333333333,
-				"y": 39.33333333333334
+				"x": 863.0161630104416,
+				"y": -140.81658464109762
 			},
 			"selected": false,
 			"type": "capsule"
 		},
 		{
-			"id": "bd9a7518-66cb-4d50-9992-df3271aeb807",
+			"data": {
+				"capsule_id": "ab07963e-d9e0-489e-b776-70f6ef2ef73b"
+			},
+			"id": "capsule_mosuite_clean_raw_counts_5",
 			"position": {
-				"x": 603.9999999999999,
-				"y": -144.66666666666666
+				"x": 914.6666666666667,
+				"y": 62
 			},
 			"selected": false,
-			"type": "dataset"
+			"type": "capsule"
+		},
+		{
+			"data": {
+				"capsule_id": "0296f612-3498-4ed0-ac13-50620e45d67d"
+			},
+			"id": "capsule_mosuite_filter_low_counts_6",
+			"position": {
+				"x": 1009.7465449291838,
+				"y": 263.6041227781795
+			},
+			"selected": false,
+			"type": "capsule"
+		},
+		{
+			"data": {
+				"capsule_id": "75561d95-aa78-4140-b64d-ddae5b64fc39"
+			},
+			"id": "capsule_mosuite_normalize_counts_7",
+			"position": {
+				"x": 1066.5598500534134,
+				"y": 506.34949634377494
+			},
+			"selected": false,
+			"type": "capsule"
+		},
+		{
+			"data": {
+				"capsule_id": "065804a2-efa7-43f2-9692-967bf0d6b592"
+			},
+			"id": "capsule_mosuite_batch_correct_counts_8",
+			"position": {
+				"x": 1216.1218082601067,
+				"y": 719.312719442436
+			},
+			"selected": true,
+			"type": "capsule"
 		}
 	],
-	"timestamp": 1769627284612,
+	"timestamp": 1769728345803,
 	"viewport": {
-		"x": -104,
-		"y": 248,
-		"zoom": 0.75
+		"x": -233.0726228878891,
+		"y": 188.02939462554733,
+		"zoom": 0.6151296833975448
 	}
 }
