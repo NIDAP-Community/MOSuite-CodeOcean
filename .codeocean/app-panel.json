@@ -1,7 +1,24 @@
 {
 	"version": 1,
+	"general": {
+		"title": "MOSuite-pipeline"
+	},
+	"datasets": [
+		{
+			"id": "bd9a7518-66cb-4d50-9992-df3271aeb807",
+			"name": "raw counts \u0026 samplesheet"
+		}
+	],
 	"processes": [
-		"capsule_mosuite_clean_1",
-		"capsule_mosuite_create_2"
+		"capsule_mosuite_create_multiomicdataset_4",
+		"capsule_mosuite_filter_low_counts_6",
+		"capsule_mosuite_normalize_counts_7",
+		"capsule_mosuite_clean_raw_counts_8",
+		"capsule_mosuite_batch_correct_counts_9",
+		"capsule_mosuite_differential_expression_analysis_10",
+		"capsule_mosuite_filter_differential_expression_results_11",
+		"capsule_mosuite_plot_expression_heatmap_12",
+		"capsule_mosuite_plot_2_d_pca_13",
+		"capsule_mosuite_plot_3_d_pca_14"
 	]
 }

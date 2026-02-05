@@ -2,37 +2,12 @@
 	"version": 2,
 	"processes": [
 		{
-			"name": "capsule_mosuite_clean_1",
-			"capsule": {
-				"id": "ab07963e-d9e0-489e-b776-70f6ef2ef73b",
-				"name": "MOSuite-clean",
-				"slug": "5801113",
-				"version": 2,
-				"app_panel": true
-			},
-			"resources": {
-				"cpus": 1,
-				"memory": 4
-			},
-			"inputs": [
-				{
-					"id": "2P0EuEmZ9xTRXDi4",
-					"source_id": "capsule_mosuite_create_2",
-					"type": "capsule",
-					"name": "MOSuite-create"
-				}
-			],
-			"results": {
-				"id": "ab07963e-d9e0-489e-b776-70f6ef2ef73b"
-			}
-		},
-		{
-			"name": "capsule_mosuite_create_2",
+			"name": "capsule_mosuite_create_multiomicdataset_4",
 			"capsule": {
 				"id": "5ce5f88d-980d-4e61-b3a4-ef4a0ce48030",
-				"name": "MOSuite-create",
+				"name": "MOSuite - create multiOmicDataSet",
 				"slug": "6541445",
-				"version": 4,
+				"version": 5,
 				"app_panel": true
 			},
 			"resources": {
@@ -41,7 +16,7 @@
 			},
 			"inputs": [
 				{
-					"id": "0EPP5jk5bdTFG7OY",
+					"id": "2QoMEOBD6Wkh3DWm",
 					"source_id": "bd9a7518-66cb-4d50-9992-df3271aeb807",
 					"type": "dataset",
 					"name": "nidap-1.0",
@@ -49,6 +24,226 @@
 					"collect": true
 				}
 			]
+		},
+		{
+			"name": "capsule_mosuite_filter_low_counts_6",
+			"capsule": {
+				"id": "0296f612-3498-4ed0-ac13-50620e45d67d",
+				"name": "MOSuite - filter low counts",
+				"slug": "4565215",
+				"version": 1,
+				"app_panel": true
+			},
+			"resources": {
+				"cpus": 1,
+				"memory": 8
+			},
+			"inputs": [
+				{
+					"id": "VFpVsmOmjj7FoaFm",
+					"source_id": "capsule_mosuite_clean_raw_counts_8",
+					"type": "capsule",
+					"name": "MOSuite - clean raw counts",
+					"collect": true
+				}
+			]
+		},
+		{
+			"name": "capsule_mosuite_normalize_counts_7",
+			"capsule": {
+				"id": "75561d95-aa78-4140-b64d-ddae5b64fc39",
+				"name": "MOSuite - normalize counts",
+				"slug": "9169525",
+				"version": 1,
+				"app_panel": true
+			},
+			"resources": {
+				"cpus": 1,
+				"memory": 8
+			},
+			"inputs": [
+				{
+					"id": "QU4dCV5IbfyyUbob",
+					"source_id": "capsule_mosuite_filter_low_counts_6",
+					"type": "capsule",
+					"name": "MOSuite - filter low counts",
+					"collect": true
+				}
+			]
+		},
+		{
+			"name": "capsule_mosuite_clean_raw_counts_8",
+			"capsule": {
+				"id": "ab07963e-d9e0-489e-b776-70f6ef2ef73b",
+				"name": "MOSuite - clean raw counts",
+				"slug": "5801113",
+				"version": 3,
+				"app_panel": true
+			},
+			"resources": {
+				"cpus": 1,
+				"memory": 8
+			},
+			"inputs": [
+				{
+					"id": "T696ioaNDR5F8bQy",
+					"source_id": "capsule_mosuite_create_multiomicdataset_4",
+					"type": "capsule",
+					"name": "MOSuite - create multiOmicDataSet",
+					"collect": true
+				}
+			]
+		},
+		{
+			"name": "capsule_mosuite_batch_correct_counts_9",
+			"capsule": {
+				"id": "065804a2-efa7-43f2-9692-967bf0d6b592",
+				"name": "MOSuite - batch correct counts",
+				"slug": "1373453",
+				"version": 1,
+				"app_panel": true
+			},
+			"resources": {
+				"cpus": 1,
+				"memory": 8
+			},
+			"inputs": [
+				{
+					"id": "dJd8ahCd0Rk0i1Fn",
+					"source_id": "capsule_mosuite_normalize_counts_7",
+					"type": "capsule",
+					"name": "MOSuite - normalize counts"
+				}
+			],
+			"results": {
+				"id": "065804a2-efa7-43f2-9692-967bf0d6b592"
+			}
+		},
+		{
+			"name": "capsule_mosuite_differential_expression_analysis_10",
+			"capsule": {
+				"id": "03afd79c-bd16-4767-ade0-794d2d6c88bc",
+				"name": "MOSuite - differential expression analysis",
+				"slug": "6218465",
+				"version": 1,
+				"app_panel": true
+			},
+			"resources": {
+				"cpus": 1,
+				"memory": 8
+			},
+			"inputs": [
+				{
+					"id": "JVdSgtWT69Eq2VdQ",
+					"source_id": "capsule_mosuite_filter_low_counts_6",
+					"type": "capsule",
+					"name": "MOSuite - filter low counts",
+					"collect": true
+				}
+			]
+		},
+		{
+			"name": "capsule_mosuite_filter_differential_expression_results_11",
+			"capsule": {
+				"id": "7fffbb1b-6366-4787-987d-79decf782bf2",
+				"name": "MOSuite - filter differential expression results",
+				"slug": "5215013",
+				"version": 1,
+				"app_panel": true
+			},
+			"resources": {
+				"cpus": 1,
+				"memory": 8
+			},
+			"inputs": [
+				{
+					"id": "fNv19BSRC3Tk0krR",
+					"source_id": "capsule_mosuite_differential_expression_analysis_10",
+					"type": "capsule",
+					"name": "MOSuite - differential expression analysis",
+					"collect": true
+				}
+			],
+			"results": {
+				"id": "7fffbb1b-6366-4787-987d-79decf782bf2"
+			}
+		},
+		{
+			"name": "capsule_mosuite_plot_expression_heatmap_12",
+			"capsule": {
+				"id": "e9bb1415-3976-46d0-b978-2e8e3554ecd2",
+				"name": "MOSuite - plot expression heatmap",
+				"slug": "0936928",
+				"version": 1,
+				"app_panel": true
+			},
+			"resources": {
+				"cpus": 1,
+				"memory": 8
+			},
+			"inputs": [
+				{
+					"id": "w2iEHre0TvekYCBP",
+					"source_id": "capsule_mosuite_normalize_counts_7",
+					"type": "capsule",
+					"name": "MOSuite - normalize counts",
+					"collect": true
+				}
+			],
+			"results": {
+				"id": "e9bb1415-3976-46d0-b978-2e8e3554ecd2"
+			}
+		},
+		{
+			"name": "capsule_mosuite_plot_2_d_pca_13",
+			"capsule": {
+				"id": "74b4ec28-63bb-4007-a375-053c8d76260d",
+				"name": "MOSuite - plot 2D PCA",
+				"slug": "8095429",
+				"version": 1,
+				"app_panel": true
+			},
+			"resources": {
+				"cpus": 1,
+				"memory": 8
+			},
+			"inputs": [
+				{
+					"id": "ciBBlF86ihcMUK94",
+					"source_id": "capsule_mosuite_normalize_counts_7",
+					"type": "capsule",
+					"name": "MOSuite - normalize counts",
+					"collect": true
+				}
+			],
+			"results": {
+				"id": "74b4ec28-63bb-4007-a375-053c8d76260d"
+			}
+		},
+		{
+			"name": "capsule_mosuite_plot_3_d_pca_14",
+			"capsule": {
+				"id": "a160b105-3084-46fc-8cc9-02886fd4bacb",
+				"name": "MOSuite - plot 3D PCA",
+				"slug": "3838154",
+				"app_panel": true
+			},
+			"resources": {
+				"cpus": 1,
+				"memory": 8
+			},
+			"inputs": [
+				{
+					"id": "PlnhVpRyQ5aCTatd",
+					"source_id": "capsule_mosuite_normalize_counts_7",
+					"type": "capsule",
+					"name": "MOSuite - normalize counts",
+					"collect": true
+				}
+			],
+			"results": {
+				"id": "a160b105-3084-46fc-8cc9-02886fd4bacb"
+			}
 		}
 	]
 }
