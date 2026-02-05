@@ -19,6 +19,9 @@
 		"capsule_mosuite_filter_differential_expression_results_11",
 		"capsule_mosuite_plot_expression_heatmap_12",
 		"capsule_mosuite_plot_2_d_pca_13",
-		"capsule_mosuite_plot_3_d_pca_14"
+		"capsule_mosuite_plot_3_d_pca_14",
+		"capsule_mosuite_plot_volcano_enhanced_15",
+		"capsule_mosuite_plot_volcano_summary_16",
+		"capsule_mosuite_plot_venn_diagram_17"
 	]
 }

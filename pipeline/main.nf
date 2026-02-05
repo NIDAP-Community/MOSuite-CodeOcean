@@ -1,10 +1,10 @@
 #!/usr/bin/env nextflow
-// hash:sha256:8af9c2ae045034467f259ee9b540d9e5c3ecb5dfbe1d919635f7c6f187c7e507
+// hash:sha256:633287ba5a231d596dc7b609c41534f27eaec9e159b5f53312b41c4cd11ae9ee
 
 // capsule - MOSuite - create multiOmicDataSet
 process capsule_mosuite_create_multiomicdataset_4 {
-	tag 'capsule-6541445'
-	container "$REGISTRY_HOST/published/5ce5f88d-980d-4e61-b3a4-ef4a0ce48030:v5"
+	tag 'capsule-2543295'
+	container "$REGISTRY_HOST/capsule/1d6bde8f-5f58-40b9-8133-6ea2156d5b02:48e7c7a2092005352c3de6bb27945664"
 
 	cpus 1
 	memory '7.5 GB'
@@ -17,7 +17,7 @@ process capsule_mosuite_create_multiomicdataset_4 {
 	#!/usr/bin/env bash
 	set -e
 
-	export CO_CAPSULE_ID=5ce5f88d-980d-4e61-b3a4-ef4a0ce48030
+	export CO_CAPSULE_ID=1d6bde8f-5f58-40b9-8133-6ea2156d5b02
 	export CO_CPUS=1
 	export CO_MEMORY=8053063680
 
@@ -30,10 +30,11 @@ process capsule_mosuite_create_multiomicdataset_4 {
 
 	echo "[${task.tag}] cloning git repo..."
 	if [[ "\$(printf '%s\n' "2.20.0" "\$(git version | awk '{print \$3}')" | sort -V | head -n1)" = "2.20.0" ]]; then
-		git clone --filter=tree:0 --branch v5.0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-6541445.git" capsule-repo
+		git clone --filter=tree:0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-2543295.git" capsule-repo
 	else
-		git clone --branch v5.0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-6541445.git" capsule-repo
+		git clone "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-2543295.git" capsule-repo
 	fi
+	git -C capsule-repo checkout 1da50426da33695c8f5a91ad5d21ff302fdf66db --quiet
 	mv capsule-repo/code capsule/code && ln -s \$PWD/capsule/code /code
 	rm -rf capsule-repo
 
@@ -48,8 +49,8 @@ process capsule_mosuite_create_multiomicdataset_4 {
 
 // capsule - MOSuite - clean raw counts
 process capsule_mosuite_clean_raw_counts_8 {
-	tag 'capsule-5801113'
-	container "$REGISTRY_HOST/published/ab07963e-d9e0-489e-b776-70f6ef2ef73b:v3"
+	tag 'capsule-9989765'
+	container "$REGISTRY_HOST/capsule/275d525b-a6f5-44d3-98d1-72a2b8fa9f3c:48e7c7a2092005352c3de6bb27945664"
 
 	cpus 1
 	memory '7.5 GB'
@@ -65,7 +66,7 @@ process capsule_mosuite_clean_raw_counts_8 {
 	#!/usr/bin/env bash
 	set -e
 
-	export CO_CAPSULE_ID=ab07963e-d9e0-489e-b776-70f6ef2ef73b
+	export CO_CAPSULE_ID=275d525b-a6f5-44d3-98d1-72a2b8fa9f3c
 	export CO_CPUS=1
 	export CO_MEMORY=8053063680
 
@@ -76,10 +77,11 @@ process capsule_mosuite_clean_raw_counts_8 {
 
 	echo "[${task.tag}] cloning git repo..."
 	if [[ "\$(printf '%s\n' "2.20.0" "\$(git version | awk '{print \$3}')" | sort -V | head -n1)" = "2.20.0" ]]; then
-		git clone --filter=tree:0 --branch v3.0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-5801113.git" capsule-repo
+		git clone --filter=tree:0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-9989765.git" capsule-repo
 	else
-		git clone --branch v3.0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-5801113.git" capsule-repo
+		git clone "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-9989765.git" capsule-repo
 	fi
+	git -C capsule-repo checkout 00418ae8b9032d4ce46741b3a6da33a236896ffa --quiet
 	mv capsule-repo/code capsule/code && ln -s \$PWD/capsule/code /code
 	rm -rf capsule-repo
 
@@ -94,8 +96,8 @@ process capsule_mosuite_clean_raw_counts_8 {
 
 // capsule - MOSuite - filter low counts
 process capsule_mosuite_filter_low_counts_6 {
-	tag 'capsule-4565215'
-	container "$REGISTRY_HOST/published/0296f612-3498-4ed0-ac13-50620e45d67d:v1"
+	tag 'capsule-2922767'
+	container "$REGISTRY_HOST/capsule/34ccaa24-827d-4ab1-a707-a3d7710abfa6:48e7c7a2092005352c3de6bb27945664"
 
 	cpus 1
 	memory '7.5 GB'
@@ -112,7 +114,7 @@ process capsule_mosuite_filter_low_counts_6 {
 	#!/usr/bin/env bash
 	set -e
 
-	export CO_CAPSULE_ID=0296f612-3498-4ed0-ac13-50620e45d67d
+	export CO_CAPSULE_ID=34ccaa24-827d-4ab1-a707-a3d7710abfa6
 	export CO_CPUS=1
 	export CO_MEMORY=8053063680
 
@@ -123,10 +125,11 @@ process capsule_mosuite_filter_low_counts_6 {
 
 	echo "[${task.tag}] cloning git repo..."
 	if [[ "\$(printf '%s\n' "2.20.0" "\$(git version | awk '{print \$3}')" | sort -V | head -n1)" = "2.20.0" ]]; then
-		git clone --filter=tree:0 --branch v1.0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-4565215.git" capsule-repo
+		git clone --filter=tree:0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-2922767.git" capsule-repo
 	else
-		git clone --branch v1.0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-4565215.git" capsule-repo
+		git clone "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-2922767.git" capsule-repo
 	fi
+	git -C capsule-repo checkout aea9f61f096eb162ca05423b137268af30268ca6 --quiet
 	mv capsule-repo/code capsule/code && ln -s \$PWD/capsule/code /code
 	rm -rf capsule-repo
 
@@ -141,8 +144,8 @@ process capsule_mosuite_filter_low_counts_6 {
 
 // capsule - MOSuite - differential expression analysis
 process capsule_mosuite_differential_expression_analysis_10 {
-	tag 'capsule-6218465'
-	container "$REGISTRY_HOST/published/03afd79c-bd16-4767-ade0-794d2d6c88bc:v1"
+	tag 'capsule-9971852'
+	container "$REGISTRY_HOST/capsule/20681ac6-cb5c-4cb3-8b70-d2d35a4a57d3:48e7c7a2092005352c3de6bb27945664"
 
 	cpus 1
 	memory '7.5 GB'
@@ -158,7 +161,7 @@ process capsule_mosuite_differential_expression_analysis_10 {
 	#!/usr/bin/env bash
 	set -e
 
-	export CO_CAPSULE_ID=03afd79c-bd16-4767-ade0-794d2d6c88bc
+	export CO_CAPSULE_ID=20681ac6-cb5c-4cb3-8b70-d2d35a4a57d3
 	export CO_CPUS=1
 	export CO_MEMORY=8053063680
 
@@ -169,10 +172,11 @@ process capsule_mosuite_differential_expression_analysis_10 {
 
 	echo "[${task.tag}] cloning git repo..."
 	if [[ "\$(printf '%s\n' "2.20.0" "\$(git version | awk '{print \$3}')" | sort -V | head -n1)" = "2.20.0" ]]; then
-		git clone --filter=tree:0 --branch v1.0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-6218465.git" capsule-repo
+		git clone --filter=tree:0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-9971852.git" capsule-repo
 	else
-		git clone --branch v1.0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-6218465.git" capsule-repo
+		git clone "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-9971852.git" capsule-repo
 	fi
+	git -C capsule-repo checkout eb9bb8654c41454da9393efb39b075ee446db66c --quiet
 	mv capsule-repo/code capsule/code && ln -s \$PWD/capsule/code /code
 	rm -rf capsule-repo
 
@@ -187,8 +191,8 @@ process capsule_mosuite_differential_expression_analysis_10 {
 
 // capsule - MOSuite - normalize counts
 process capsule_mosuite_normalize_counts_7 {
-	tag 'capsule-9169525'
-	container "$REGISTRY_HOST/published/75561d95-aa78-4140-b64d-ddae5b64fc39:v1"
+	tag 'capsule-6680510'
+	container "$REGISTRY_HOST/capsule/3ee00838-8eaa-414c-bfa9-c2f8e607b2ae:48e7c7a2092005352c3de6bb27945664"
 
 	cpus 1
 	memory '7.5 GB'
@@ -207,7 +211,7 @@ process capsule_mosuite_normalize_counts_7 {
 	#!/usr/bin/env bash
 	set -e
 
-	export CO_CAPSULE_ID=75561d95-aa78-4140-b64d-ddae5b64fc39
+	export CO_CAPSULE_ID=3ee00838-8eaa-414c-bfa9-c2f8e607b2ae
 	export CO_CPUS=1
 	export CO_MEMORY=8053063680
 
@@ -218,10 +222,11 @@ process capsule_mosuite_normalize_counts_7 {
 
 	echo "[${task.tag}] cloning git repo..."
 	if [[ "\$(printf '%s\n' "2.20.0" "\$(git version | awk '{print \$3}')" | sort -V | head -n1)" = "2.20.0" ]]; then
-		git clone --filter=tree:0 --branch v1.0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-9169525.git" capsule-repo
+		git clone --filter=tree:0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-6680510.git" capsule-repo
 	else
-		git clone --branch v1.0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-9169525.git" capsule-repo
+		git clone "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-6680510.git" capsule-repo
 	fi
+	git -C capsule-repo checkout dc5748a4ca64d37a198ad6b3beab0cd767a9f27d --quiet
 	mv capsule-repo/code capsule/code && ln -s \$PWD/capsule/code /code
 	rm -rf capsule-repo
 
@@ -236,8 +241,8 @@ process capsule_mosuite_normalize_counts_7 {
 
 // capsule - MOSuite - batch correct counts
 process capsule_mosuite_batch_correct_counts_9 {
-	tag 'capsule-1373453'
-	container "$REGISTRY_HOST/published/065804a2-efa7-43f2-9692-967bf0d6b592:v1"
+	tag 'capsule-8049145'
+	container "$REGISTRY_HOST/capsule/2eae5a71-36a6-44e2-a3b2-2cd5634b445d:48e7c7a2092005352c3de6bb27945664"
 
 	cpus 1
 	memory '7.5 GB'
@@ -255,7 +260,7 @@ process capsule_mosuite_batch_correct_counts_9 {
 	#!/usr/bin/env bash
 	set -e
 
-	export CO_CAPSULE_ID=065804a2-efa7-43f2-9692-967bf0d6b592
+	export CO_CAPSULE_ID=2eae5a71-36a6-44e2-a3b2-2cd5634b445d
 	export CO_CPUS=1
 	export CO_MEMORY=8053063680
 
@@ -266,10 +271,11 @@ process capsule_mosuite_batch_correct_counts_9 {
 
 	echo "[${task.tag}] cloning git repo..."
 	if [[ "\$(printf '%s\n' "2.20.0" "\$(git version | awk '{print \$3}')" | sort -V | head -n1)" = "2.20.0" ]]; then
-		git clone --filter=tree:0 --branch v1.0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-1373453.git" capsule-repo
+		git clone --filter=tree:0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-8049145.git" capsule-repo
 	else
-		git clone --branch v1.0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-1373453.git" capsule-repo
+		git clone "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-8049145.git" capsule-repo
 	fi
+	git -C capsule-repo checkout 20c082a76dfa497edbac1eabf3ca394190215fc0 --quiet
 	mv capsule-repo/code capsule/code && ln -s \$PWD/capsule/code /code
 	rm -rf capsule-repo
 
@@ -282,10 +288,10 @@ process capsule_mosuite_batch_correct_counts_9 {
 	"""
 }
 
-// capsule - MOSuite - filter differential expression results
+// capsule - MOSuite - filter differential expression
 process capsule_mosuite_filter_differential_expression_results_11 {
-	tag 'capsule-5215013'
-	container "$REGISTRY_HOST/published/7fffbb1b-6366-4787-987d-79decf782bf2:v1"
+	tag 'capsule-8221739'
+	container "$REGISTRY_HOST/capsule/1231d6b7-b591-4efa-a1b9-821425d54d8a:48e7c7a2092005352c3de6bb27945664"
 
 	cpus 1
 	memory '7.5 GB'
@@ -297,13 +303,16 @@ process capsule_mosuite_filter_differential_expression_results_11 {
 
 	output:
 	path 'capsule/results/*'
+	path 'capsule/results/*', emit: to_capsule_mosuite_plot_volcano_enhanced_15_10
+	path 'capsule/results/*', emit: to_capsule_mosuite_plot_volcano_summary_16_11
+	path 'capsule/results/*', emit: to_capsule_mosuite_plot_venn_diagram_17_12
 
 	script:
 	"""
 	#!/usr/bin/env bash
 	set -e
 
-	export CO_CAPSULE_ID=7fffbb1b-6366-4787-987d-79decf782bf2
+	export CO_CAPSULE_ID=1231d6b7-b591-4efa-a1b9-821425d54d8a
 	export CO_CPUS=1
 	export CO_MEMORY=8053063680
 
@@ -314,10 +323,11 @@ process capsule_mosuite_filter_differential_expression_results_11 {
 
 	echo "[${task.tag}] cloning git repo..."
 	if [[ "\$(printf '%s\n' "2.20.0" "\$(git version | awk '{print \$3}')" | sort -V | head -n1)" = "2.20.0" ]]; then
-		git clone --filter=tree:0 --branch v1.0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-5215013.git" capsule-repo
+		git clone --filter=tree:0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-8221739.git" capsule-repo
 	else
-		git clone --branch v1.0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-5215013.git" capsule-repo
+		git clone "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-8221739.git" capsule-repo
 	fi
+	git -C capsule-repo checkout 8e44d8929659bc82848a18a1edd5723a341cbf7f --quiet
 	mv capsule-repo/code capsule/code && ln -s \$PWD/capsule/code /code
 	rm -rf capsule-repo
 
@@ -332,8 +342,8 @@ process capsule_mosuite_filter_differential_expression_results_11 {
 
 // capsule - MOSuite - plot 2D PCA
 process capsule_mosuite_plot_2_d_pca_13 {
-	tag 'capsule-8095429'
-	container "$REGISTRY_HOST/published/74b4ec28-63bb-4007-a375-053c8d76260d:v1"
+	tag 'capsule-0166328'
+	container "$REGISTRY_HOST/capsule/64e9c322-1a38-4e54-9bf6-965ca3b0c4c3:48e7c7a2092005352c3de6bb27945664"
 
 	cpus 1
 	memory '7.5 GB'
@@ -351,7 +361,7 @@ process capsule_mosuite_plot_2_d_pca_13 {
 	#!/usr/bin/env bash
 	set -e
 
-	export CO_CAPSULE_ID=74b4ec28-63bb-4007-a375-053c8d76260d
+	export CO_CAPSULE_ID=64e9c322-1a38-4e54-9bf6-965ca3b0c4c3
 	export CO_CPUS=1
 	export CO_MEMORY=8053063680
 
@@ -362,10 +372,11 @@ process capsule_mosuite_plot_2_d_pca_13 {
 
 	echo "[${task.tag}] cloning git repo..."
 	if [[ "\$(printf '%s\n' "2.20.0" "\$(git version | awk '{print \$3}')" | sort -V | head -n1)" = "2.20.0" ]]; then
-		git clone --filter=tree:0 --branch v1.0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-8095429.git" capsule-repo
+		git clone --filter=tree:0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-0166328.git" capsule-repo
 	else
-		git clone --branch v1.0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-8095429.git" capsule-repo
+		git clone "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-0166328.git" capsule-repo
 	fi
+	git -C capsule-repo checkout 9c7198585b4bd6c2b01cbadbbd325ef4813d57fd --quiet
 	mv capsule-repo/code capsule/code && ln -s \$PWD/capsule/code /code
 	rm -rf capsule-repo
 
@@ -381,7 +392,7 @@ process capsule_mosuite_plot_2_d_pca_13 {
 // capsule - MOSuite - plot 3D PCA
 process capsule_mosuite_plot_3_d_pca_14 {
 	tag 'capsule-3838154'
-	container "$REGISTRY_HOST/capsule/a160b105-3084-46fc-8cc9-02886fd4bacb"
+	container "$REGISTRY_HOST/capsule/a160b105-3084-46fc-8cc9-02886fd4bacb:48e7c7a2092005352c3de6bb27945664"
 
 	cpus 1
 	memory '7.5 GB'
@@ -414,6 +425,7 @@ process capsule_mosuite_plot_3_d_pca_14 {
 	else
 		git clone "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-3838154.git" capsule-repo
 	fi
+	git -C capsule-repo checkout c7a904144f770af28bd08bae91e36ae2e3bf53fe --quiet
 	mv capsule-repo/code capsule/code && ln -s \$PWD/capsule/code /code
 	rm -rf capsule-repo
 
@@ -428,8 +440,8 @@ process capsule_mosuite_plot_3_d_pca_14 {
 
 // capsule - MOSuite - plot expression heatmap
 process capsule_mosuite_plot_expression_heatmap_12 {
-	tag 'capsule-0936928'
-	container "$REGISTRY_HOST/published/e9bb1415-3976-46d0-b978-2e8e3554ecd2:v1"
+	tag 'capsule-6385174'
+	container "$REGISTRY_HOST/capsule/b1c2220e-36e5-4592-a3a7-4a50ed5f9fca:48e7c7a2092005352c3de6bb27945664"
 
 	cpus 1
 	memory '7.5 GB'
@@ -447,7 +459,7 @@ process capsule_mosuite_plot_expression_heatmap_12 {
 	#!/usr/bin/env bash
 	set -e
 
-	export CO_CAPSULE_ID=e9bb1415-3976-46d0-b978-2e8e3554ecd2
+	export CO_CAPSULE_ID=b1c2220e-36e5-4592-a3a7-4a50ed5f9fca
 	export CO_CPUS=1
 	export CO_MEMORY=8053063680
 
@@ -458,10 +470,11 @@ process capsule_mosuite_plot_expression_heatmap_12 {
 
 	echo "[${task.tag}] cloning git repo..."
 	if [[ "\$(printf '%s\n' "2.20.0" "\$(git version | awk '{print \$3}')" | sort -V | head -n1)" = "2.20.0" ]]; then
-		git clone --filter=tree:0 --branch v1.0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-0936928.git" capsule-repo
+		git clone --filter=tree:0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-6385174.git" capsule-repo
 	else
-		git clone --branch v1.0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-0936928.git" capsule-repo
+		git clone "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-6385174.git" capsule-repo
 	fi
+	git -C capsule-repo checkout 2184ab214d95e361b3db938e153684f99afadd83 --quiet
 	mv capsule-repo/code capsule/code && ln -s \$PWD/capsule/code /code
 	rm -rf capsule-repo
 
@@ -469,6 +482,153 @@ process capsule_mosuite_plot_expression_heatmap_12 {
 	cd capsule/code
 	chmod +x run
 	./run ${params.capsule_mosuite_plot_expression_heatmap_12_args}
+
+	echo "[${task.tag}] completed!"
+	"""
+}
+
+// capsule - MOSuite - Plot Venn Diagram
+process capsule_mosuite_plot_venn_diagram_17 {
+	tag 'capsule-0361730'
+	container "$REGISTRY_HOST/capsule/fc79457f-e98b-4446-af20-6a47ac21bfc4:48e7c7a2092005352c3de6bb27945664"
+
+	cpus 1
+	memory '7.5 GB'
+
+	publishDir "$RESULTS_PATH", saveAs: { filename -> new File(filename).getName() }
+
+	input:
+	path 'capsule/data/'
+
+	output:
+	path 'capsule/results/*'
+
+	script:
+	"""
+	#!/usr/bin/env bash
+	set -e
+
+	export CO_CAPSULE_ID=fc79457f-e98b-4446-af20-6a47ac21bfc4
+	export CO_CPUS=1
+	export CO_MEMORY=8053063680
+
+	mkdir -p capsule
+	mkdir -p capsule/data && ln -s \$PWD/capsule/data /data
+	mkdir -p capsule/results && ln -s \$PWD/capsule/results /results
+	mkdir -p capsule/scratch && ln -s \$PWD/capsule/scratch /scratch
+
+	echo "[${task.tag}] cloning git repo..."
+	if [[ "\$(printf '%s\n' "2.20.0" "\$(git version | awk '{print \$3}')" | sort -V | head -n1)" = "2.20.0" ]]; then
+		git clone --filter=tree:0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-0361730.git" capsule-repo
+	else
+		git clone "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-0361730.git" capsule-repo
+	fi
+	git -C capsule-repo checkout 8bc11db1cc07323ad04c8e6559b49c43390d3fa7 --quiet
+	mv capsule-repo/code capsule/code && ln -s \$PWD/capsule/code /code
+	rm -rf capsule-repo
+
+	echo "[${task.tag}] running capsule..."
+	cd capsule/code
+	chmod +x run
+	./run ${params.capsule_mosuite_plot_venn_diagram_17_args}
+
+	echo "[${task.tag}] completed!"
+	"""
+}
+
+// capsule - MOSuite - Plot Volcano Enhanced
+process capsule_mosuite_plot_volcano_enhanced_15 {
+	tag 'capsule-0997557'
+	container "$REGISTRY_HOST/capsule/1ed73516-2eb1-4bcf-919e-bb2f03664fb2:48e7c7a2092005352c3de6bb27945664"
+
+	cpus 1
+	memory '7.5 GB'
+
+	publishDir "$RESULTS_PATH", saveAs: { filename -> new File(filename).getName() }
+
+	input:
+	path 'capsule/data/'
+
+	output:
+	path 'capsule/results/*'
+
+	script:
+	"""
+	#!/usr/bin/env bash
+	set -e
+
+	export CO_CAPSULE_ID=1ed73516-2eb1-4bcf-919e-bb2f03664fb2
+	export CO_CPUS=1
+	export CO_MEMORY=8053063680
+
+	mkdir -p capsule
+	mkdir -p capsule/data && ln -s \$PWD/capsule/data /data
+	mkdir -p capsule/results && ln -s \$PWD/capsule/results /results
+	mkdir -p capsule/scratch && ln -s \$PWD/capsule/scratch /scratch
+
+	echo "[${task.tag}] cloning git repo..."
+	if [[ "\$(printf '%s\n' "2.20.0" "\$(git version | awk '{print \$3}')" | sort -V | head -n1)" = "2.20.0" ]]; then
+		git clone --filter=tree:0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-0997557.git" capsule-repo
+	else
+		git clone "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-0997557.git" capsule-repo
+	fi
+	git -C capsule-repo checkout b889f36e190d58e04371485ff9e6c9f495f94e6e --quiet
+	mv capsule-repo/code capsule/code && ln -s \$PWD/capsule/code /code
+	rm -rf capsule-repo
+
+	echo "[${task.tag}] running capsule..."
+	cd capsule/code
+	chmod +x run
+	./run ${params.capsule_mosuite_plot_volcano_enhanced_15_args}
+
+	echo "[${task.tag}] completed!"
+	"""
+}
+
+// capsule - MOSuite - Plot Volcano Summary
+process capsule_mosuite_plot_volcano_summary_16 {
+	tag 'capsule-9325734'
+	container "$REGISTRY_HOST/capsule/49efd716-f3b6-4d75-a62a-0f61bed2e75b:48e7c7a2092005352c3de6bb27945664"
+
+	cpus 1
+	memory '7.5 GB'
+
+	publishDir "$RESULTS_PATH", saveAs: { filename -> new File(filename).getName() }
+
+	input:
+	path 'capsule/data/'
+
+	output:
+	path 'capsule/results/*'
+
+	script:
+	"""
+	#!/usr/bin/env bash
+	set -e
+
+	export CO_CAPSULE_ID=49efd716-f3b6-4d75-a62a-0f61bed2e75b
+	export CO_CPUS=1
+	export CO_MEMORY=8053063680
+
+	mkdir -p capsule
+	mkdir -p capsule/data && ln -s \$PWD/capsule/data /data
+	mkdir -p capsule/results && ln -s \$PWD/capsule/results /results
+	mkdir -p capsule/scratch && ln -s \$PWD/capsule/scratch /scratch
+
+	echo "[${task.tag}] cloning git repo..."
+	if [[ "\$(printf '%s\n' "2.20.0" "\$(git version | awk '{print \$3}')" | sort -V | head -n1)" = "2.20.0" ]]; then
+		git clone --filter=tree:0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-9325734.git" capsule-repo
+	else
+		git clone "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-9325734.git" capsule-repo
+	fi
+	git -C capsule-repo checkout e4e95bddcae0b5849a6a27f8ba508ee59aa82e5c --quiet
+	mv capsule-repo/code capsule/code && ln -s \$PWD/capsule/code /code
+	rm -rf capsule-repo
+
+	echo "[${task.tag}] running capsule..."
+	cd capsule/code
+	chmod +x run
+	./run ${params.capsule_mosuite_plot_volcano_summary_16_args}
 
 	echo "[${task.tag}] completed!"
 	"""
@@ -486,4 +646,7 @@ workflow {
 	capsule_mosuite_plot_2_d_pca_13(capsule_mosuite_normalize_counts_7.out.to_capsule_mosuite_plot_2_d_pca_13_8.collect())
 	capsule_mosuite_plot_3_d_pca_14(capsule_mosuite_normalize_counts_7.out.to_capsule_mosuite_plot_3_d_pca_14_9.collect())
 	capsule_mosuite_plot_expression_heatmap_12(capsule_mosuite_normalize_counts_7.out.to_capsule_mosuite_plot_expression_heatmap_12_7.collect())
+	capsule_mosuite_plot_venn_diagram_17(capsule_mosuite_filter_differential_expression_results_11.out.to_capsule_mosuite_plot_venn_diagram_17_12.collect())
+	capsule_mosuite_plot_volcano_enhanced_15(capsule_mosuite_filter_differential_expression_results_11.out.to_capsule_mosuite_plot_volcano_enhanced_15_10.collect())
+	capsule_mosuite_plot_volcano_summary_16(capsule_mosuite_filter_differential_expression_results_11.out.to_capsule_mosuite_plot_volcano_summary_16_11.collect())
 }

@@ -83,14 +83,47 @@
 			"id": "xy-edge__capsule_mosuite_plot_expression_heatmap_12-results",
 			"source": "capsule_mosuite_plot_expression_heatmap_12",
 			"target": "results"
+		},
+		{
+			"id": "xy-edge__capsule_mosuite_filter_differential_expression_results_11-capsule_mosuite_plot_volcano_enhanced_15",
+			"selected": false,
+			"source": "capsule_mosuite_filter_differential_expression_results_11",
+			"target": "capsule_mosuite_plot_volcano_enhanced_15"
+		},
+		{
+			"id": "xy-edge__capsule_mosuite_filter_differential_expression_results_11-capsule_mosuite_plot_volcano_summary_16",
+			"selected": false,
+			"source": "capsule_mosuite_filter_differential_expression_results_11",
+			"target": "capsule_mosuite_plot_volcano_summary_16"
+		},
+		{
+			"id": "xy-edge__capsule_mosuite_filter_differential_expression_results_11-capsule_mosuite_plot_venn_diagram_17",
+			"selected": false,
+			"source": "capsule_mosuite_filter_differential_expression_results_11",
+			"target": "capsule_mosuite_plot_venn_diagram_17"
+		},
+		{
+			"id": "xy-edge__capsule_mosuite_plot_volcano_enhanced_15-results",
+			"source": "capsule_mosuite_plot_volcano_enhanced_15",
+			"target": "results"
+		},
+		{
+			"id": "xy-edge__capsule_mosuite_plot_volcano_summary_16-results",
+			"source": "capsule_mosuite_plot_volcano_summary_16",
+			"target": "results"
+		},
+		{
+			"id": "xy-edge__capsule_mosuite_plot_venn_diagram_17-results",
+			"source": "capsule_mosuite_plot_venn_diagram_17",
+			"target": "results"
 		}
 	],
 	"nodes": [
 		{
 			"id": "results",
 			"position": {
-				"x": 1587.658058657255,
-				"y": 1600.3872578624141
+				"x": 1756.4571308404495,
+				"y": 1986.2137085668587
 			},
 			"selected": false,
 			"type": "results"
@@ -106,7 +139,7 @@
 		},
 		{
 			"data": {
-				"capsule_id": "5ce5f88d-980d-4e61-b3a4-ef4a0ce48030"
+				"capsule_id": "1d6bde8f-5f58-40b9-8133-6ea2156d5b02"
 			},
 			"id": "capsule_mosuite_create_multiomicdataset_4",
 			"position": {
@@ -118,7 +151,7 @@
 		},
 		{
 			"data": {
-				"capsule_id": "0296f612-3498-4ed0-ac13-50620e45d67d"
+				"capsule_id": "34ccaa24-827d-4ab1-a707-a3d7710abfa6"
 			},
 			"id": "capsule_mosuite_filter_low_counts_6",
 			"position": {
@@ -130,7 +163,7 @@
 		},
 		{
 			"data": {
-				"capsule_id": "75561d95-aa78-4140-b64d-ddae5b64fc39"
+				"capsule_id": "3ee00838-8eaa-414c-bfa9-c2f8e607b2ae"
 			},
 			"id": "capsule_mosuite_normalize_counts_7",
 			"position": {
@@ -142,7 +175,7 @@
 		},
 		{
 			"data": {
-				"capsule_id": "ab07963e-d9e0-489e-b776-70f6ef2ef73b"
+				"capsule_id": "275d525b-a6f5-44d3-98d1-72a2b8fa9f3c"
 			},
 			"id": "capsule_mosuite_clean_raw_counts_8",
 			"position": {
@@ -154,7 +187,7 @@
 		},
 		{
 			"data": {
-				"capsule_id": "065804a2-efa7-43f2-9692-967bf0d6b592"
+				"capsule_id": "2eae5a71-36a6-44e2-a3b2-2cd5634b445d"
 			},
 			"id": "capsule_mosuite_batch_correct_counts_9",
 			"position": {
@@ -166,19 +199,19 @@
 		},
 		{
 			"data": {
-				"capsule_id": "03afd79c-bd16-4767-ade0-794d2d6c88bc"
+				"capsule_id": "20681ac6-cb5c-4cb3-8b70-d2d35a4a57d3"
 			},
 			"id": "capsule_mosuite_differential_expression_analysis_10",
 			"position": {
 				"x": 1421.2854093431497,
 				"y": 700.0248604406177
 			},
-			"selected": true,
+			"selected": false,
 			"type": "capsule"
 		},
 		{
 			"data": {
-				"capsule_id": "7fffbb1b-6366-4787-987d-79decf782bf2"
+				"capsule_id": "1231d6b7-b591-4efa-a1b9-821425d54d8a"
 			},
 			"id": "capsule_mosuite_filter_differential_expression_results_11",
 			"position": {
@@ -190,7 +223,7 @@
 		},
 		{
 			"data": {
-				"capsule_id": "e9bb1415-3976-46d0-b978-2e8e3554ecd2"
+				"capsule_id": "b1c2220e-36e5-4592-a3a7-4a50ed5f9fca"
 			},
 			"id": "capsule_mosuite_plot_expression_heatmap_12",
 			"position": {
@@ -202,7 +235,7 @@
 		},
 		{
 			"data": {
-				"capsule_id": "74b4ec28-63bb-4007-a375-053c8d76260d"
+				"capsule_id": "64e9c322-1a38-4e54-9bf6-965ca3b0c4c3"
 			},
 			"id": "capsule_mosuite_plot_2_d_pca_13",
 			"position": {
@@ -223,12 +256,48 @@
 			},
 			"selected": false,
 			"type": "capsule"
+		},
+		{
+			"data": {
+				"capsule_id": "1ed73516-2eb1-4bcf-919e-bb2f03664fb2"
+			},
+			"id": "capsule_mosuite_plot_volcano_enhanced_15",
+			"position": {
+				"x": 1751.8349639754883,
+				"y": 1413.074496418595
+			},
+			"selected": false,
+			"type": "capsule"
+		},
+		{
+			"data": {
+				"capsule_id": "49efd716-f3b6-4d75-a62a-0f61bed2e75b"
+			},
+			"id": "capsule_mosuite_plot_volcano_summary_16",
+			"position": {
+				"x": 2003.6938970742233,
+				"y": 1445.2267006439652
+			},
+			"selected": false,
+			"type": "capsule"
+		},
+		{
+			"data": {
+				"capsule_id": "fc79457f-e98b-4446-af20-6a47ac21bfc4"
+			},
+			"id": "capsule_mosuite_plot_venn_diagram_17",
+			"position": {
+				"x": 2252.8734798208434,
+				"y": 1461.3028027566504
+			},
+			"selected": true,
+			"type": "capsule"
 		}
 	],
-	"timestamp": 1770239945557,
+	"timestamp": 1770320854320,
 	"viewport": {
-		"x": -375.194647645313,
-		"y": -165.89459366008077,
-		"zoom": 0.5071432609245071
+		"x": -193.62179172521155,
+		"y": -15.707021281051993,
+		"zoom": 0.40955149322423245
 	}
 }
