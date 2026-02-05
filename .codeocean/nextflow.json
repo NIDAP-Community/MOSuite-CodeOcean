@@ -244,6 +244,84 @@
 			"results": {
 				"id": "a160b105-3084-46fc-8cc9-02886fd4bacb"
 			}
+		},
+		{
+			"name": "capsule_mosuite_plot_volcano_enhanced_15",
+			"capsule": {
+				"id": "4fbfaf69-b582-4533-8e00-f138caa869d1",
+				"name": "MOSuite - Plot Volcano Enhanced",
+				"slug": "7581039",
+				"version": 1,
+				"app_panel": true
+			},
+			"resources": {
+				"cpus": 1,
+				"memory": 8
+			},
+			"inputs": [
+				{
+					"id": "FrEEXOAv8b9ynjCQ",
+					"source_id": "capsule_mosuite_filter_differential_expression_results_11",
+					"type": "capsule",
+					"name": "MOSuite - filter differential expression results",
+					"collect": true
+				}
+			],
+			"results": {
+				"id": "4fbfaf69-b582-4533-8e00-f138caa869d1"
+			}
+		},
+		{
+			"name": "capsule_mosuite_plot_volcano_summary_16",
+			"capsule": {
+				"id": "f47f9943-0628-44d3-ae81-b2ed11d73817",
+				"name": "MOSuite - Plot Volcano Summary",
+				"slug": "6849617",
+				"version": 2,
+				"app_panel": true
+			},
+			"resources": {
+				"cpus": 1,
+				"memory": 8
+			},
+			"inputs": [
+				{
+					"id": "Lw7lIWW4xBeK3fLq",
+					"source_id": "capsule_mosuite_filter_differential_expression_results_11",
+					"type": "capsule",
+					"name": "MOSuite - filter differential expression results",
+					"collect": true
+				}
+			],
+			"results": {
+				"id": "f47f9943-0628-44d3-ae81-b2ed11d73817"
+			}
+		},
+		{
+			"name": "capsule_mosuite_plot_venn_diagram_17",
+			"capsule": {
+				"id": "b18a7c9b-d66b-4921-9df8-0cfa88a4a35a",
+				"name": "MOSuite - Plot Venn Diagram",
+				"slug": "5013652",
+				"version": 1,
+				"app_panel": true
+			},
+			"resources": {
+				"cpus": 1,
+				"memory": 8
+			},
+			"inputs": [
+				{
+					"id": "qDPGXdGH6MI1JgSO",
+					"source_id": "capsule_mosuite_filter_differential_expression_results_11",
+					"type": "capsule",
+					"name": "MOSuite - filter differential expression results",
+					"collect": true
+				}
+			],
+			"results": {
+				"id": "b18a7c9b-d66b-4921-9df8-0cfa88a4a35a"
+			}
 		}
 	]
 }
