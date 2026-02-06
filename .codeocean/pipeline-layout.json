@@ -47,11 +47,6 @@
 			"target": "capsule_mosuite_filter_differential_expression_results_11"
 		},
 		{
-			"id": "xy-edge__capsule_mosuite_filter_differential_expression_results_11-results",
-			"source": "capsule_mosuite_filter_differential_expression_results_11",
-			"target": "results"
-		},
-		{
 			"id": "xy-edge__capsule_mosuite_normalize_counts_7-capsule_mosuite_plot_expression_heatmap_12",
 			"selected": false,
 			"source": "capsule_mosuite_normalize_counts_7",
@@ -116,14 +111,34 @@
 			"id": "xy-edge__capsule_mosuite_plot_venn_diagram_17-results",
 			"source": "capsule_mosuite_plot_venn_diagram_17",
 			"target": "results"
+		},
+		{
+			"id": "xy-edge__capsule_mosuite_filter_differential_expression_results_11-capsule_mosuite_write_multiomicdataset_properties_18",
+			"source": "capsule_mosuite_filter_differential_expression_results_11",
+			"target": "capsule_mosuite_write_multiomicdataset_properties_18"
+		},
+		{
+			"id": "xy-edge__capsule_mosuite_write_multiomicdataset_properties_18-results",
+			"source": "capsule_mosuite_write_multiomicdataset_properties_18",
+			"target": "results"
+		},
+		{
+			"id": "xy-edge__capsule_mosuite_filter_low_counts_6-results",
+			"source": "capsule_mosuite_filter_low_counts_6",
+			"target": "results"
+		},
+		{
+			"id": "xy-edge__capsule_mosuite_clean_raw_counts_8-results",
+			"source": "capsule_mosuite_clean_raw_counts_8",
+			"target": "results"
 		}
 	],
 	"nodes": [
 		{
 			"id": "results",
 			"position": {
-				"x": 1756.4571308404495,
-				"y": 1986.2137085668587
+				"x": 1422.9128325608433,
+				"y": 2399.9369247021395
 			},
 			"selected": false,
 			"type": "results"
@@ -131,39 +146,39 @@
 		{
 			"id": "bd9a7518-66cb-4d50-9992-df3271aeb807",
 			"position": {
-				"x": 803.9578354285136,
-				"y": -268.2178495330654
+				"x": -629.3754979048198,
+				"y": -601.5511828663988
 			},
 			"selected": false,
 			"type": "dataset"
 		},
 		{
 			"data": {
-				"capsule_id": "1d6bde8f-5f58-40b9-8133-6ea2156d5b02"
+				"capsule_id": "5ce5f88d-980d-4e61-b3a4-ef4a0ce48030"
 			},
 			"id": "capsule_mosuite_create_multiomicdataset_4",
 			"position": {
-				"x": 863.0161630104416,
-				"y": -140.81658464109762
+				"x": -306.9838369895584,
+				"y": -77.48325130776426
 			},
-			"selected": false,
+			"selected": true,
 			"type": "capsule"
 		},
 		{
 			"data": {
-				"capsule_id": "34ccaa24-827d-4ab1-a707-a3d7710abfa6"
+				"capsule_id": "0296f612-3498-4ed0-ac13-50620e45d67d"
 			},
 			"id": "capsule_mosuite_filter_low_counts_6",
 			"position": {
-				"x": 1040.6343406457836,
-				"y": 359.5188568455153
+				"x": 305.71144075734924,
+				"y": 408.9614091325217
 			},
 			"selected": false,
 			"type": "capsule"
 		},
 		{
 			"data": {
-				"capsule_id": "3ee00838-8eaa-414c-bfa9-c2f8e607b2ae"
+				"capsule_id": "75561d95-aa78-4140-b64d-ddae5b64fc39"
 			},
 			"id": "capsule_mosuite_normalize_counts_7",
 			"position": {
@@ -175,19 +190,19 @@
 		},
 		{
 			"data": {
-				"capsule_id": "275d525b-a6f5-44d3-98d1-72a2b8fa9f3c"
+				"capsule_id": "ab07963e-d9e0-489e-b776-70f6ef2ef73b"
 			},
 			"id": "capsule_mosuite_clean_raw_counts_8",
 			"position": {
-				"x": 954.3883813983939,
-				"y": 93.42843781660065
+				"x": -38.944951934939446,
+				"y": 163.42843781660062
 			},
 			"selected": false,
 			"type": "capsule"
 		},
 		{
 			"data": {
-				"capsule_id": "2eae5a71-36a6-44e2-a3b2-2cd5634b445d"
+				"capsule_id": "065804a2-efa7-43f2-9692-967bf0d6b592"
 			},
 			"id": "capsule_mosuite_batch_correct_counts_9",
 			"position": {
@@ -199,7 +214,7 @@
 		},
 		{
 			"data": {
-				"capsule_id": "20681ac6-cb5c-4cb3-8b70-d2d35a4a57d3"
+				"capsule_id": "03afd79c-bd16-4767-ade0-794d2d6c88bc"
 			},
 			"id": "capsule_mosuite_differential_expression_analysis_10",
 			"position": {
@@ -211,7 +226,7 @@
 		},
 		{
 			"data": {
-				"capsule_id": "1231d6b7-b591-4efa-a1b9-821425d54d8a"
+				"capsule_id": "7fffbb1b-6366-4787-987d-79decf782bf2"
 			},
 			"id": "capsule_mosuite_filter_differential_expression_results_11",
 			"position": {
@@ -223,7 +238,7 @@
 		},
 		{
 			"data": {
-				"capsule_id": "b1c2220e-36e5-4592-a3a7-4a50ed5f9fca"
+				"capsule_id": "e9bb1415-3976-46d0-b978-2e8e3554ecd2"
 			},
 			"id": "capsule_mosuite_plot_expression_heatmap_12",
 			"position": {
@@ -235,7 +250,7 @@
 		},
 		{
 			"data": {
-				"capsule_id": "64e9c322-1a38-4e54-9bf6-965ca3b0c4c3"
+				"capsule_id": "74b4ec28-63bb-4007-a375-053c8d76260d"
 			},
 			"id": "capsule_mosuite_plot_2_d_pca_13",
 			"position": {
@@ -247,7 +262,7 @@
 		},
 		{
 			"data": {
-				"capsule_id": "a160b105-3084-46fc-8cc9-02886fd4bacb"
+				"capsule_id": "26158c6d-404a-48a6-8cc8-af079827c942"
 			},
 			"id": "capsule_mosuite_plot_3_d_pca_14",
 			"position": {
@@ -259,7 +274,7 @@
 		},
 		{
 			"data": {
-				"capsule_id": "1ed73516-2eb1-4bcf-919e-bb2f03664fb2"
+				"capsule_id": "4fbfaf69-b582-4533-8e00-f138caa869d1"
 			},
 			"id": "capsule_mosuite_plot_volcano_enhanced_15",
 			"position": {
@@ -271,7 +286,7 @@
 		},
 		{
 			"data": {
-				"capsule_id": "49efd716-f3b6-4d75-a62a-0f61bed2e75b"
+				"capsule_id": "f47f9943-0628-44d3-ae81-b2ed11d73817"
 			},
 			"id": "capsule_mosuite_plot_volcano_summary_16",
 			"position": {
@@ -283,21 +298,33 @@
 		},
 		{
 			"data": {
-				"capsule_id": "fc79457f-e98b-4446-af20-6a47ac21bfc4"
+				"capsule_id": "b18a7c9b-d66b-4921-9df8-0cfa88a4a35a"
 			},
 			"id": "capsule_mosuite_plot_venn_diagram_17",
 			"position": {
 				"x": 2252.8734798208434,
 				"y": 1461.3028027566504
 			},
-			"selected": true,
+			"selected": false,
+			"type": "capsule"
+		},
+		{
+			"data": {
+				"capsule_id": "b34c433c-950b-4860-9f43-e424babf0f2d"
+			},
+			"id": "capsule_mosuite_write_multiomicdataset_properties_18",
+			"position": {
+				"x": 1481.0122287008724,
+				"y": 1545.4292723622932
+			},
+			"selected": false,
 			"type": "capsule"
 		}
 	],
-	"timestamp": 1770320854320,
+	"timestamp": 1770405710322,
 	"viewport": {
-		"x": -193.62179172521155,
-		"y": -15.707021281051993,
-		"zoom": 0.40955149322423245
+		"x": 467.32060389282145,
+		"y": 266.5593838012634,
+		"zoom": 0.3
 	}
 }

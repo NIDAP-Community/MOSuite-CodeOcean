@@ -2,4 +2,4 @@
 
 ## v1.0
 
-Initial Release
+Initial release use MOSuite v0.3.0

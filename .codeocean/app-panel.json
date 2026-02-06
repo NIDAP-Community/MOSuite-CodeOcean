@@ -22,6 +22,7 @@
 		"capsule_mosuite_plot_3_d_pca_14",
 		"capsule_mosuite_plot_volcano_enhanced_15",
 		"capsule_mosuite_plot_volcano_summary_16",
-		"capsule_mosuite_plot_venn_diagram_17"
+		"capsule_mosuite_plot_venn_diagram_17",
+		"capsule_mosuite_write_multiomicdataset_properties_18"
 	]
 }
