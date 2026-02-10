@@ -33,6 +33,7 @@ jobs:
 
       - name: add to MOSuite project
         uses: actions/add-to-project@v1.0.2
+        if: github.event_name == 'issues'
         with:
           project-url: https://github.com/orgs/CCBR/projects/32
           github-token: ${{ steps.generate-token.outputs.token }}
