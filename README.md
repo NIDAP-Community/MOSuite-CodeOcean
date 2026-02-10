@@ -1,7 +1,6 @@
-# MOSuite-CodeOcean pipeline
+# MOSuite CodeOcean pipeline
 
-- [Code Ocean pipeline](https://poc-nci.codeocean.io/capsule/2912065/tree) | [Latest Release](https://poc-nci.codeocean.io/capsule/0249047/tree/latest)
-
+[Code Ocean pipeline](https://poc-nci.codeocean.io/capsule/2912065/tree) | [Latest Release](https://poc-nci.codeocean.io/capsule/0249047/tree/latest)
 
 ## Help & Contributing
 
