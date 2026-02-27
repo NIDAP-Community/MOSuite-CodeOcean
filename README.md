@@ -1,6 +1,6 @@
 # MOSuite CodeOcean pipeline
 
-[Code Ocean pipeline](https://poc-nci.codeocean.io/capsule/2912065/tree) | [Latest Release](https://poc-nci.codeocean.io/capsule/0249047/tree/latest)
+[Code Ocean pipeline](https://poc-nci.codeocean.io/capsule/2912065/tree) | [Latest Release](https://poc-nci.codeocean.io/capsule/0249047/tree/latest) | [MOSuite Collection](https://poc-nci.codeocean.io/collections/69468a46-1fb3-4f6f-833b-4204f874be4b?filter=all)
 
 ## Help & Contributing
 
